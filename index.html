@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM Traversal</title>
+<link href="css/meyerReset.css" rel="stylesheet" type="text/css" media="screen">
+<link href="css/GOT_master.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+
+<body>
+    <main>
+
+    <section id="imageContainer">
+    	<div id="houseImages"> <!-- add in all of the images to make a scrolling "banner" -->
+
+        <img src="images/stark.jpg"/>
+    		<img src="images/baratheon.jpg"/>
+    		<img src="images/lannister.jpg"/>
+    		<img src="images/tully.jpg"/>
+    		<img src="images/greyjoy.jpg"/>
+    		<img src="images/arryn.jpg"/>
+        <img src="images/targaryen.jpg"/>
+        <img src="images/frey.jpg"/>
+
+
+        </div>
+    </section>
+
+    <nav id="bottomNav">
+    	<ul id="navList">
+        	<!-- custom data attribute, allowing to pass custom data https://developer.mozilla.org/en/docs/Web/API/HTMLElement/dataset -->
+            <li><div id="0" class="sigilContainer stark" data-offset="0"></div></li>
+            <li><div id="1" class="sigilContainer baratheon" data-offset="1"></div></li>
+            <li><div id="2" class="sigilContainer lannister" data-offset="2"></div></li>
+            <li><div id="3" class="sigilContainer tully" data-offset="3"></div></li>
+            <li><div id="4" class="sigilContainer greyjoy" data-offset="4"></div></li>
+            <li><div id="5" class="sigilContainer arryn" data-offset="5"></div></li>
+            <li><div id="6" class="sigilContainer targaryen" data-offset="6"></div></li>
+            <li><div id="7" class="sigilContainer frey" data-offset="7"></div></li>
+        </ul>
+    </nav>
+
+    <h1 id="tagHead">The Game of Thrones</h1>
+    <h1 id="tagLine"></h1><!-- replace this with the house name -->
+
+    <p class="house-info"></p><!-- replace this with house details (github gist for details) -->
+</main>
+
+<section class="lightbox">
+  <h1 id="videoHeading"></h1>
+  <p id="vidInfo"></p>
+
+    <span class="close-lightbox">x</span>
+    <!-- add video here with sources for fallback / standards -->
+        <video>
+          <source src="video/House-Stark.mp4" type="video/mp4">
+        </video>
+
+        <div class="controls">
+          <ul>
+            <li class="rewind">
+              <i class="fas fa-backward"></i>
+            </li>
+            <li class="play-pause">
+              <i class="fas fa-pause-circle"></i>
+            </li>
+            <li class="forward">
+            <i class="fas fa-forward"></i>
+          </li>
+          </ul>
+          <div class="volumeUp">
+            <img src="images/volume-up.svg" alt="Volume Up Icon" width="50" height="50">
+            <input class="volumeCon" type="range" min="0" max="100" step="1">
+          </div>
+
+        </div>
+</section>
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
